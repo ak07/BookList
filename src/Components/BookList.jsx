@@ -3,11 +3,12 @@ import React, { useRef, useState } from 'react';
 import BookCard from "./BookCard";
 import useBookApi from '../CustomHooks/useBookApi';
 import "./BookList.css";
+import Loading from './Loading';
 
 function BookList() {
   const [searchQuery, setSearchQuery] = useState("");
   const searchTextRef = useRef();
-  const [bookData] = useBookApi(searchQuery);
+  const [isDataLoading, bookData] = useBookApi(searchQuery);
   const bookList = bookData.map((bookInfo,index) => {
     return <BookCard key={index} bookInfo={bookInfo}/>
   });
@@ -32,7 +33,7 @@ function BookList() {
         </form>
       </div>
       <div className='bookList_Searchresult'>
-        {bookList}
+        {isDataLoading?<Loading/>:bookList}
       </div>
     </div>
   )

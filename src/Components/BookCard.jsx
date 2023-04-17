@@ -21,14 +21,14 @@ function BookCard(props) {
       </div>
       <div className="bookCard_details">
         <h2 className="title">{title}</h2>
-        <p className="author">Authors :{authorString}</p>
+        <p className="author">Authors: {authorString}</p>
         <p className='bookCard_button' onClick={setExpandDetails}>{expandDetails?"Hide ":"Show "}Details</p>
         {
           expandDetails && 
           <div className="details">
-            {description && <span className="desc">Description: {description}</span>}
-            {publisher && <span className="publisher">Publisher: {publisher}</span>}
-            {publishedDate && <span className="publishedDate">Published Date: {publishedDate}</span>}
+            {description && <span className="desc"><strong>Description: </strong>{description}<br/></span>}
+            {publisher && <span className="publisher"><strong>Publisher: </strong>{publisher}<br/></span>}
+            {publishedDate && <span className="publishedDate"><strong>Published Date: </strong>{publishedDate}<br/></span>}
           </div>
         }
       </div>

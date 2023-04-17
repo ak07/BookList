@@ -15,8 +15,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .app{
-    background: #2F404F;
+    background: #96a2ac;
     min-height: 100vh;
+    padding-left: calc(100vw - 100%);
 }
 .container{
     max-width: 124rem;
