@@ -1,0 +1,27 @@
+/* BookList CSS */
+.bookList{
+    padding: 4rem 0rem;
+}
+.bookList_Searchbar {
+    background: #3894A1;
+    padding: 2rem;
+    text-align: center;
+}
+
+.bookList_Searchbar form input{
+    border: none;
+    border-radius: 3rem;
+    height: 2rem;
+    width: 33rem;
+    margin-right: 3rem;
+}
+.bookList_Searchresult{
+    margin-top: 2rem;
+}
+
+
+/* .card-list-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */

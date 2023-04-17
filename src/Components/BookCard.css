@@ -1,0 +1,27 @@
+/* Book card CSs */
+.bookCard{
+    background-color: #F0F1EE;
+    padding: 2rem 1rem;
+    margin-bottom: 3rem;
+    display: flex;
+    
+}
+.bookCard_img{
+    margin-left: 2rem;
+}
+.bookCard_details{
+padding: 0 2rem;
+}
+.bookCard_details h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.bookCard_details .bookCard_button{
+    
+        background-color: #C7DAD3;
+        width: 7rem;
+        padding: 0.5rem 1rem;
+        margin-top: 1rem;
+        border-radius: 3rem;
+    
+}

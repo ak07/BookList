@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  ol,ul {
+    list-style:none;
+}
+caption,th {
+    text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:normal;
+}
+
+.app{
+    background: #2F404F;
+    min-height: 100vh;
+}
+.container{
+    max-width: 124rem;
+    padding: 0 10rem;
+    margin: 0 auto;
+}
+button{
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    margin-right: 1rem;
+}
