@@ -23,18 +23,21 @@ const preProcessFetchResult = (jsonResult) =>{
 
 }
 
-const useBookApi = (query) => {
-    let url = `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${import.meta.env.VITE_API_KEY}`;
-
+const useBookApi = (query, queryType) => {
+    
     const [bookData, setBookData] = useState([]);
     const [isloading, setIsLoading] = useState(false);
-   
+    const [isError, setIsError] = useState(false);
+    
+    let url = `https://www.googleapis.com/books/v1/volumes?q=${queryType}:${query}&key=${import.meta.env.VITE_API_KEY}`;
+    
     useEffect(()=>{
+        setIsError(false);
         if(query == null || query == ""){
             setBookData([]);
             return
         }
-        setIsLoading(true)        
+        setIsLoading(true);    
         let abortController = new AbortController()
         fetch(url,{
             signal:abortController.signal
@@ -47,11 +50,12 @@ const useBookApi = (query) => {
         .catch(err => {
             console.log(err);
             setIsLoading(false);
+            setIsError(true);
         });
         return () => abortController.abort();
-    },[query]);
+    },[query, queryType]);
 
-    return [isloading, bookData];
+    return [isloading, isError, bookData];
 }
 
 export default useBookApi;

@@ -6,11 +6,9 @@ import "./BookCard.css"
 function BookCard(props) {
   const [expandDetails, setExpandDetails] = useToggle();
   let {title, authors, description, imageLinks, publishedDate, publisher} = props.bookInfo;
-  console.log(props.bookInfo);
   let authorString = authors?.reduce((prev, curr)=>{
     return prev+", "+curr;
   });
-  console.log(authorString);
   let coverImage = imageLinks? imageLinks.smallThumbnail:null;
 
 

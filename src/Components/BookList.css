@@ -2,6 +2,7 @@
 .bookList{
     padding: 4rem 0rem;
 }
+
 .bookList_Searchbar {
     background: #3894A1;
     padding: 2rem;
@@ -16,13 +17,22 @@
     margin-right: 3rem;
     padding-left: 1rem;
 }
+
+.bookList_Searchbar form select{
+    margin-right: 2rem;
+    height: 2rem;
+    padding-right: 2rem;
+}
+
 button{
     cursor: pointer;
 }
+
 img{
     width: 128px;
     height: auto;
 }
+
 .bookList_Searchresult{
     margin-top: 2rem;
 }
